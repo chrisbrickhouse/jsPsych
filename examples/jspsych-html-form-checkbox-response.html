@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My experiment</title>
+    <script src="../jspsych.js"></script>
+    <script src="../plugins/jspsych-html-form-checkbox-response.js"></script>
+    <link href="../css/jspsych.css" rel="stylesheet" type="text/css"></link>
+  </head>
+  <body></body>
+  <script>
+
+    /* create timeline */
+    var timeline = [];
+
+    /* define welcome message trial */
+    var welcome = {
+      type: "html-form-checkbox-response",
+      options: [
+	      {
+		      name: "html-form-checkbox-response-1-1",
+		      label: "Option 1"
+	      },
+	      {
+		      name: "html-form-checkbox-response-1-2",
+		      label: "Option 2"
+	      }
+      ],
+      prompt: "Test 1 of html-form-checkbox-response"
+    };
+    timeline.push(welcome);
+
+    /* start the experiment */
+    jsPsych.init({
+      timeline: timeline
+    });
+  </script>
+</html>
