@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My experiment</title>
+    <script src="../jspsych.js"></script>
+    <script src="../plugins/jspsych-html-form-radiobutton.js"></script>
+    <link href="../css/jspsych.css" rel="stylesheet" type="text/css"></link>
+  </head>
+  <body></body>
+  <script>
+
+    /* create timeline */
+    var timeline = [];
+
+    /* define welcome message trial */
+    var welcome = {
+      type: "html-form-radiobutton",
+      group: 'radiobutton-test',
+      right: false,
+      options: [
+	      {
+		      value: "radiobutton-1-1",
+		      label: "Option 1"
+	      },
+	      {
+		      value: "radiobutton-1-2",
+		      label: "Option 2"
+	      }
+      ],
+      prompt: "Test 1 of html-form-radiobutton"
+    };
+    timeline.push(welcome);
+
+    /* start the experiment */
+    jsPsych.init({
+      timeline: timeline
+    });
+  </script>
+</html>
